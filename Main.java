@@ -1,4 +1,8 @@
-class Pengguna {
+interface Displayable {
+    void tampilData();
+}
+
+class Pengguna implements Displayable{
     private int id;
     private String nama;
     private String password;
@@ -37,7 +41,7 @@ class Pengguna {
         return password; 
     }
 
-    
+    @Override
     public void tampilData() {
         System.out.println("ID : " + id);
         System.out.println("Nama : " + nama);
