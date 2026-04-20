@@ -208,6 +208,11 @@ class Konseling {
 }
 
 public class Main {
+
+    public static void tampilkan(Displayable d) {
+        System.out.println("\n== POLYMORPHISM ===");
+        d.tampilData();
+    }
     public static void main(String[] args) {
         Psikolog psikolog1 = new Psikolog(1, "Dr. Andi", "admin123", 45, "Psikologi Klinis");
         Pasien pasien1 = new Pasien(101, "Budi", "pasien456", 30, "Stres kerja");
@@ -219,5 +224,8 @@ public class Main {
         konseling1.setStatus(true);
         System.out.println("\nStatus setelah update: " +
                 (konseling1.isStatus() ? "Selesai" : "Belum Selesai"));
+
+        tampilkan(psikolog1);
+        tampilkan(pasien1);
     }
 }
