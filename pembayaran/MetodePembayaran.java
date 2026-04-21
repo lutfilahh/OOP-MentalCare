@@ -1,5 +1,5 @@
 package pembayaran;
 
-interface MetodePembayaran {
-    void bayar(double jumlah);
+public interface MetodePembayaran {
+    boolean bayar(double jumlah);
 }

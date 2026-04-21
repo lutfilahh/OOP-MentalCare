@@ -8,7 +8,11 @@ public class TransferBank implements MetodePembayaran {
     }
 
     @Override
-    public void bayar(double jumlah) {
-        System.out.println("Transfer ke: " + namaBank + " sebesar Rp: " + jumlah);
+    public boolean bayar(double jumlah) {
+        if (jumlah > 0) {
+            System.out.println("Transfer ke: " + namaBank + " sebesar Rp: " + jumlah);
+            return true;
+        }
+        return false;
     }
 }

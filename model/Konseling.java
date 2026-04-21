@@ -1,6 +1,6 @@
 package model;
 
-public class Konseling {
+public class Konseling implements Tampilkan {
     private Psikolog psikolog;
     private Pasien pasien;
     private int idKonseling;

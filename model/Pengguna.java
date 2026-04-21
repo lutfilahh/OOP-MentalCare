@@ -11,10 +11,6 @@ public class Pengguna {
         this.password = password;
     }
 
-    public void setId(int id) {
-        if (id > 0) this.id = id;
-    }
-    
     public void setNama(String nama) {
         if (nama != null && !nama.isEmpty()) {
             this.nama = nama;
