@@ -2,6 +2,7 @@ import model.Psikolog;
 import model.Pasien;
 import model.Konseling;
 import pembayaran.Dana;
+import pembayaran.MetodePembayaran;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,7 +16,7 @@ public class Main {
         System.out.println("\nStatus setelah update: " + (konseling1.getStatus() ? "Selesai" : "Belum Selesai"));
 
         System.out.println("\nProses pembayaran: ");
-        Dana dana1 = new Dana();
+        MetodePembayaran dana1 = new Dana();
         dana1.bayar(500000);
     }
 }
