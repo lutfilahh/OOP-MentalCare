@@ -1,7 +1,7 @@
 import model.Psikolog;
 import model.Pasien;
 import model.Konseling;
-import pembayaran.TransferBank;
+import pembayaran.Dana;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,7 +14,8 @@ public class Main {
         konseling1.setStatus(true);
         System.out.println("\nStatus setelah update: " + (konseling1.getStatus() ? "Selesai" : "Belum Selesai"));
 
-        TransferBank pembayaran1 = new TransferBank(500000, "BCA");
-        pembayaran1.prosesBayar();
+        System.out.println("\nProses pembayaran: ");
+        Dana dana1 = new Dana();
+        dana1.bayar(500000);
     }
 }

@@ -1,16 +1,14 @@
 package pembayaran;
 
-public class TransferBank extends Pembayaran {
+public class TransferBank implements MetodePembayaran {
     private String namaBank;
 
-    public TransferBank(double jumlah, String namaBank) {
-        super(jumlah);
+    public TransferBank(String namaBank)  {
         this.namaBank = namaBank;
     }
 
     @Override
-    public void prosesBayar() {
-        super.prosesBayar();
-        System.out.println("Transfer Bank " + namaBank + " sebesar Rp" + jumlah);
+    public void bayar(double jumlah) {
+        System.out.println("Transfer ke: " + namaBank + " sebesar Rp: " + jumlah);
     }
 }
