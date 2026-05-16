@@ -10,6 +10,7 @@ public class SubSpesialis extends Psikolog {
 
     public String getSubSpesialis() { return subSpesialis; }
 
+    @Override
     public void tampilData() {
         super.tampilData();
         System.out.println("Subspesialis  : " + subSpesialis);
