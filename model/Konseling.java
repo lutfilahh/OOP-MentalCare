@@ -60,11 +60,9 @@ public class Konseling implements Tampilkan {
         System.out.println("Tanggal : " + tanggal);
         System.out.println("Status : " + (status ? "Selesai" : "Belum Selesai"));
         System.out.println("Hasil : " + hasil);
-
         System.out.println("\n--- Data Psikolog ---");
-        psikolog.tampilData();
-
+        psikolog.tampilData(); 
         System.out.println("\n--- Data Pasien ---");
-        pasien.tampilData();
+        pasien.tampilData();   
     }
 }

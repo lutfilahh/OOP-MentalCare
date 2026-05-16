@@ -6,6 +6,13 @@ public class Pasien extends Pengguna {
 
     public Pasien(int id, String nama, String password, int umur, String keluhan) {
         super(id, nama, password);
+        // ✅ Validasi di konstruktor: cegat data tidak valid sebelum objek terbentuk
+        if (umur <= 0) {
+            throw new IllegalArgumentException("Umur harus lebih besar dari 0.");
+        }
+        if (keluhan == null || keluhan.trim().isEmpty()) {
+            throw new IllegalArgumentException("Keluhan tidak boleh kosong.");
+        }
         this.umur = umur;
         this.keluhan = keluhan;
     }
