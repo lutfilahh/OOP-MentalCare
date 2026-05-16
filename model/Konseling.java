@@ -60,9 +60,28 @@ public class Konseling implements Tampilkan {
         System.out.println("Tanggal : " + tanggal);
         System.out.println("Status : " + (status ? "Selesai" : "Belum Selesai"));
         System.out.println("Hasil : " + hasil);
+    
+        // ✅ Validasi terpusat: cegat potensi NullPointerException sebelum terjadi
         System.out.println("\n--- Data Psikolog ---");
-        psikolog.tampilData(); 
+        try {
+            if (psikolog != null) {
+                psikolog.tampilData();
+            } else {
+                System.out.println("⚠️ Data psikolog tidak tersedia.");
+            }
+        } catch (NullPointerException e) {
+            System.out.println("❌ Terjadi kesalahan saat menampilkan data psikolog: " + e.getMessage());
+        }
+    
         System.out.println("\n--- Data Pasien ---");
-        pasien.tampilData();   
+        try {
+            if (pasien != null) {
+                pasien.tampilData();
+            } else {
+                System.out.println("⚠️ Data pasien tidak tersedia.");
+            }
+        } catch (NullPointerException e) {
+            System.out.println("❌ Terjadi kesalahan saat menampilkan data pasien: " + e.getMessage());
+        }
     }
 }
